@@ -12,7 +12,7 @@ const Funny = () => {
         <SectionTitle
           chapter="Chapter 04"
           title="Our Dumbest Moments"
-          subtitle="If anyone else saw these memories, they'd probably think we're completely insane"
+          subtitle="If anyone ever saw us together or heard our conversations, they'd probably be convinced that we're completely INSANE"
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
