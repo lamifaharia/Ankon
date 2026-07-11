@@ -4,6 +4,7 @@ import FloatingHearts from "./FloatingHearts";
 import ShootingStars from "./ShootingStars";
 import Sparkles from "./Sparkles";
 import CursorGlow from "./CursorGlow";
+import MouseTrail from "./MouseTrail";
 
 const Background = () => {
   return (
@@ -14,6 +15,7 @@ const Background = () => {
       <FloatingHearts />
       <ShootingStars />
       <CursorGlow />
+      <MouseTrail />
     </>
   );
 };

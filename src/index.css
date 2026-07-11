@@ -1,54 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap");
+/** @type {import('tailwindcss').Config} */
 
-@import "tailwindcss";
-@plugin "daisyui";
+export default {
 
-html{
-  scroll-behavior:smooth;
-}
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
 
-body{
-  margin:0;
-  padding:0;
-  background:#020617;
-  color:white;
-  font-family:Inter,sans-serif;
-  overflow-x:hidden;
-}
+  theme: {
 
-*{
-  box-sizing:border-box;
-}
-.font-heading {
-  font-family: "Sora", sans-serif;
-}
+    extend: {
 
-.font-body {
-  font-family: "Inter", sans-serif;
-}
+      colors: {
 
-.font-letter {
-  font-family: "Dancing Script", cursive;
-}
+        primary: "#ff4fa3",
 
-@keyframes glow {
+        secondary: "#8b5cf6",
 
-  0%{
-    text-shadow:0 0 10px #ec4899;
+        dark: "#070812",
+
+      },
+
+      animation: {
+
+        float: "floating 4s ease-in-out infinite",
+
+      },
+
+    },
+
+  },
+
+  plugins: [
+
+    require("daisyui")
+
+  ],
+
+  daisyui:{
+
+    themes:["dark"]
+
   }
-
-  50%{
-    text-shadow:0 0 30px #8b5cf6;
-  }
-
-  100%{
-    text-shadow:0 0 10px #06b6d4;
-  }
-
-}
-
-.glow{
-
-  animation: glow 4s infinite;
 
 }

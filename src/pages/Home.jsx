@@ -1,7 +1,8 @@
+import { useState } from "react";
+
+import Intro from "../components/intro/Intro";
+
 import Navbar from "../components/common/Navbar";
-import BackgroundBlobs from "../components/common/BackgroundBlobs";
-import FloatingStars from "../components/common/FloatingStars";
-import FloatingHearts from "../components/common/FloatingHearts";
 import MusicPlayer from "../components/common/MusicPlayer";
 
 import Hero from "../components/hero/Hero";
@@ -11,13 +12,22 @@ import Memories from "../components/memories/Memories";
 import Funny from "../components/funny/Funny";
 
 import Background from "../components/background/Background";
+import Letter from "../components/letter/Letter";
+import Fireworks from "../components/ending/Fireworks";
+import FinalMessage from "../components/ending/FinalMessage";
+
 const Home = () => {
+  const [started, setStarted] = useState(false);
+
   return (
-    <main className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      {/* Background Effects */}
-      <BackgroundBlobs />
-      <FloatingStars />
-      <FloatingHearts />
+    <main className="relative min-h-screen overflow-x-hidden bg-slate-950 text-white">
+      {/* Intro Screen */}
+      {!started && (
+        <Intro onStart={() => setStarted(true)} />
+      )}
+
+      {/* Background */}
+      <Background />
 
       {/* Navigation */}
       <Navbar />
@@ -28,10 +38,12 @@ const Home = () => {
       <Gallery />
       <Memories />
       <Funny />
-      <MusicPlayer />
-      <Background />
+      <Letter />
+      <Fireworks />
+      <FinalMessage />
+      
 
-      {/* Music */}
+      {/* Music Player */}
       <MusicPlayer />
     </main>
   );
