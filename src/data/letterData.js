@@ -6,7 +6,7 @@ Amra shuru theke eksathe na thakleo jotodin eksathe chilam onek onek memories cr
 Ami janina ami tur life a ki but you're someone very very close to my heart. Ami janina varsity seshe amader kemon dekha hobe, kemon kotha hobe, but I'll always remain same, tui bolsili na je you notice everytime the moment I see you my eyes become light up? Tui call dileo amar emon khushi e lage. Ar jokhon dekha kore bashay chole ashi eka eka? same mon kharap o lage.
 I know things are not going well between us but I just want you to know how much it hurts me to think that we won't be able to see each other whenever we want anymore. Ah I'm not good at writing. Ami amader ke onek miss kori already, shamne hoyto aro korbo. Tao onek bhalo je onek shundor shundor memories niye amader varsity life sesh hocche, ami amar shob dorkare tuke paisi shobsomoy, asha kori tui o hoyto paichish amake.
 Ankon tui amar pochonder onek adorer Bhai. Adnan ke jemon amar ekta choto manush mone hoy, tukeo amar emon Adnan er moto chotto ekta manush e mone hoy. Ami shobsomoy chai tui bhalo thak, khushi thak. Range Rover 2024 model er oi gaari te tur hok, tur joto luxury dream ache shob fulfill hok. Amar adorer Bhai ta thakuk dudhe bhaate.
-Happy Birthday lokkhi Bhai
+Happy Birthday lokkhi Bhai 🫂
 `;
 
 export default letterData;
