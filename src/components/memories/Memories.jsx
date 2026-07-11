@@ -1,9 +1,11 @@
 import SectionTitle from "../common/SectionTitle";
 import MemoryCard from "./MemoryCard";
 import reasons from "../../data/reasons";
+import Reveal from "../common/Reveal";
 
 const Memories = () => {
   return (
+    <Reveal>
     <section id ="memories" className="py-32 px-6 relative z-10">
       <div className="max-w-7xl mx-auto">
 
@@ -27,6 +29,7 @@ const Memories = () => {
 
       </div>
     </section>
+    </Reveal>
   );
 };
 

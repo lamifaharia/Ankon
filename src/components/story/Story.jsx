@@ -1,7 +1,9 @@
+import Reveal from "../common/Reveal";
 import SectionTitle from "../common/SectionTitle";
 
 const Story = () => {
   return (
+    <Reveal>
     <section
       id="story"
       className="py-32 px-6 relative z-10"
@@ -28,6 +30,7 @@ const Story = () => {
         </div>
       </div>
     </section>
+    </Reveal>
   );
 };
 

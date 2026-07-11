@@ -1,81 +1,160 @@
 import { motion } from "framer-motion";
 import TypingText from "../common/TypingText";
 
-const letterText = `
-Bhai,
+import letterData from "../../data/letterData";
 
-I don't know where to start.
 
-Four years ago, I didn't know that a random person I met in university would become someone so important in my life.
+const LetterPaper = ({ onComplete }) => {
 
-You are not just a friend to me.
-
-You became family.
-
-You annoyed me.
-You made me laugh.
-You protected me.
-You listened to me.
-
-And honestly...
-
-Life at university would not have been the same without you.
-
-Thank you for being my Bhai.
-
-Happy Birthday ❤️
-`;
-
-const LetterPaper = () => {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        scale: 0.7,
-        rotateX: -90,
-      }}
-      animate={{
-        opacity: 1,
-        scale: 1,
-        rotateX: 0,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      className="
-max-w-3xl
-w-full
-bg-white
-text-gray-800
-rounded-[35px]
-p-10
-md:p-16
-shadow-2xl
-"
-    >
-      <h2
-        className="
-font-heading
-text-5xl
-text-center
-mb-10
-text-pink-500
-"
-      >
-        Dear Bhai,
-      </h2>
 
-      <p
+    <motion.div
+
+      initial={{
+        opacity:0,
+        y:100,
+        scale:0.8,
+        rotateX:-60,
+      }}
+
+      animate={{
+        opacity:1,
+        y:0,
+        scale:1,
+        rotateX:0,
+      }}
+
+      transition={{
+        duration:1.2,
+        ease:"easeOut",
+      }}
+
+      className="
+      relative
+      max-w-4xl
+      w-full
+      "
+
+    >
+
+      {/* Paper glow */}
+
+      <div
         className="
-text-lg
-leading-10
-whitespace-pre-line
-"
+        absolute
+        inset-0
+        bg-pink-500
+        blur-3xl
+        opacity-20
+        rounded-[50px]
+        "
+      />
+
+
+      {/* Paper */}
+
+      <div
+
+        className="
+        relative
+        overflow-visible
+        bg-gradient-to-br
+        from-white
+        to-pink-50
+        text-gray-800
+        rounded-[40px]
+        p-10
+        md:p-16
+        shadow-2xl
+        "
+
       >
-        <TypingText text={letterText} speed={35} />
-      </p>
+
+
+        <motion.h2
+
+          initial={{
+            opacity:0,
+            y:-20
+          }}
+
+          animate={{
+            opacity:1,
+            y:0
+          }}
+
+          transition={{
+            delay:0.8
+          }}
+
+          className="
+          font-heading
+          text-5xl
+          text-center
+          text-pink-500
+          mb-10
+          "
+        >
+
+          Dear Bhai ❤️
+
+        </motion.h2>
+
+
+
+        <p
+          className="
+          text-lg
+          leading-10
+          whitespace-pre-line
+          "
+        >
+
+          <TypingText
+            text={letterData}
+            speed={35}
+          />
+
+        </p>
+
+
+
+        <motion.div
+
+          initial={{
+            opacity:0
+          }}
+
+          animate={{
+            opacity:1
+          }}
+
+          transition={{
+            delay:12
+          }}
+
+          className="
+          flex
+          justify-center
+          mt-12
+          "
+
+        >
+
+
+
+
+        </motion.div>
+
+
+      </div>
+
+
     </motion.div>
+
   );
+
 };
+
 
 export default LetterPaper;

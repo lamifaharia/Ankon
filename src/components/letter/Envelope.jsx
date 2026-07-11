@@ -5,56 +5,136 @@ const Envelope = ({ onOpen }) => {
     <motion.div
       initial={{
         opacity: 0,
-        y: 120,
-        scale: .8,
+        y: 100,
+        scale: 0.8,
       }}
+
       whileInView={{
         opacity: 1,
         y: 0,
         scale: 1,
       }}
+
       whileHover={{
-        scale: 1.05,
-        rotate: -2,
+        scale: 1.08,
+        rotate: 2,
       }}
+
       transition={{
-        duration: .8,
+        duration: 1,
       }}
+
       onClick={onOpen}
-      className="cursor-pointer"
+
+      className="
+      cursor-pointer
+      relative
+      z-20
+      "
     >
-      <div className="glass w-[340px] h-[230px] rounded-2xl relative overflow-hidden">
 
-        <div
-          className="absolute inset-0 bg-gradient-to-r
-          from-pink-500
-          via-purple-500
-          to-cyan-500
-          opacity-30"
-        />
+      {/* Glow */}
+      <div
+        className="
+        absolute
+        inset-0
+        rounded-3xl
+        bg-pink-500
+        blur-3xl
+        opacity-30
+        animate-pulse
+        "
+      />
 
-        <div
-          className="absolute
-          left-0
-          right-0
+
+      {/* Envelope */}
+      <div
+        className="
+        relative
+        w-[340px]
+        h-[230px]
+        rounded-3xl
+        overflow-visible
+        glass
+        "
+      >
+
+        {/* Flap */}
+        <motion.div
+
+          initial={{
+            rotateX:0,
+          }}
+
+          whileHover={{
+            rotateX:-35,
+          }}
+
+          transition={{
+            duration:0.5,
+          }}
+
+          style={{
+            transformStyle:"preserve-3d",
+          }}
+
+          className="
+          absolute
           top-0
-          border-l-[170px]
-          border-r-[170px]
-          border-t-[120px]
-          border-l-transparent
-          border-r-transparent
-          border-t-white/20"
+          left-0
+          w-full
+          h-32
+          rounded-t-3xl
+          bg-gradient-to-r
+          from-pink-400
+          via-purple-400
+          to-cyan-400
+          opacity-40
+          origin-top
+          z-20
+          "
+
         />
 
-        <div className="absolute inset-0 flex items-center justify-center">
 
-          <p className="font-heading text-2xl glow">
-            Click to Open 💌
+        {/* Letter inside */}
+        <div
+          className="
+          absolute
+          inset-0
+          flex
+          items-center
+          justify-center
+          "
+        >
+
+          <p
+            className="
+            font-heading
+            text-3xl
+            glow
+            "
+          >
+            💌 Bhai
           </p>
 
         </div>
 
+
       </div>
+
+
+      <p
+        className="
+        text-center
+        mt-6
+        text-gray-300
+        "
+      >
+        Click to open
+      </p>
+
+
     </motion.div>
   );
 };

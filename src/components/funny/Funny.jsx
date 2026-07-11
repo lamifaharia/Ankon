@@ -1,9 +1,11 @@
 import SectionTitle from "../common/SectionTitle";
 import FunnyCard from "./FunnyCard";
 import funny from "../../data/funny";
+import Reveal from "../common/Reveal";
 
 const Funny = () => {
   return (
+    <Reveal>
     <section className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
 
@@ -27,6 +29,7 @@ const Funny = () => {
 
       </div>
     </section>
+    </Reveal>
   );
 };
 

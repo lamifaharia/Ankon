@@ -34,7 +34,7 @@ const HeroText = () => {
         transition={{ delay: 1 }}
         className="text-center mt-10 text-gray-300 max-w-2xl mx-auto leading-9"
       >
-        This isn't just a birthday website.
+        This isn't just a website.
         <br />
         It's a collection of memories,
         laughter, and everything I never

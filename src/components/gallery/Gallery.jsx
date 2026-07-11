@@ -3,9 +3,11 @@ import GalleryCard from "./GalleryCard";
 import photos from "../../data/photos";
 
 import { PhotoProvider } from "react-photo-view";
+import Reveal from "../common/Reveal";
 
 const Gallery = () => {
   return (
+    <Reveal>
     <section
       id="gallery"
       className="py-32 px-6 relative z-10"
@@ -32,6 +34,7 @@ const Gallery = () => {
 
       </div>
     </section>
+    </Reveal>
   );
 };
 

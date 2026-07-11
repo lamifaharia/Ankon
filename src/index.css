@@ -1,46 +1,143 @@
-/** @type {import('tailwindcss').Config} */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
 
-export default {
+@import "tailwindcss";
 
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
 
-  theme: {
+/* Global Font */
 
-    extend: {
+body {
+  font-family: "Comic Neue", cursive;
+  background: #070812;
+  color: white;
+}
 
-      colors: {
 
-        primary: "#ff4fa3",
+/* Custom Theme */
 
-        secondary: "#8b5cf6",
+@theme {
 
-        dark: "#070812",
+  --color-primary: #ff4fa3;
 
-      },
+  --color-secondary: #8b5cf6;
 
-      animation: {
+  --color-dark: #070812;
 
-        float: "floating 4s ease-in-out infinite",
 
-      },
+  --font-comic: "Comic Neue", cursive;
 
-    },
 
-  },
+  --animate-float: floating 4s ease-in-out infinite;
 
-  plugins: [
+}
 
-    require("daisyui")
 
-  ],
+/* Floating Animation */
 
-  daisyui:{
+@keyframes floating {
 
-    themes:["dark"]
-
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
+  50% {
+    transform: translateY(-20px);
+  }
+
+}
+
+
+
+/* Glass Effect */
+
+.glass {
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+}
+
+
+
+/* Glowing Text */
+
+.glow {
+
+  text-shadow:
+    0 0 10px rgba(255, 79, 163, 0.8),
+    0 0 25px rgba(139, 92, 246, 0.8),
+    0 0 40px rgba(34, 211, 238, 0.5);
+
+}
+
+
+
+/* Heading Font */
+
+.font-heading {
+
+  font-family: "Comic Neue", cursive;
+
+}
+
+
+
+/* Smooth Scrolling */
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+
+
+/* Hide scrollbar but keep scrolling */
+
+::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background: #ff4fa3;
+
+  border-radius: 20px;
+
+}
+/* Hide all scrollbars but keep scrolling */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }

@@ -3,34 +3,35 @@ import { AnimatePresence } from "framer-motion";
 
 import Envelope from "./Envelope";
 import LetterPaper from "./LetterPaper";
+import Reveal from "../common/Reveal";
 
-const Letter = () => {
+const Letter = ({ onComplete }) => {
   const [opened, setOpened] = useState(false);
 
   return (
+    <Reveal>
     <section
       id="letter"
-      className="relative min-h-screen py-40 flex items-center justify-center px-6"
+      className="
+      relative
+      overflow-visible
+      min-h-screen
+      py-40
+      flex
+      items-center
+      justify-center
+      px-6
+      "
     >
-
       <AnimatePresence mode="wait">
-
         {!opened ? (
-          <Envelope
-            key="envelope"
-            onOpen={() => setOpened(true)}
-          />
+          <Envelope key="envelope" onOpen={() => setOpened(true)} />
         ) : (
-
-          <LetterPaper
-            key="letter"
-          />
-
+          <LetterPaper key="paper" onComplete={onComplete} />
         )}
-
       </AnimatePresence>
-
     </section>
+    </Reveal>
   );
 };
 

@@ -9,13 +9,35 @@ import MouseTrail from "./MouseTrail";
 const Background = () => {
   return (
     <>
-      <AuroraGlow />
-      <FloatingStars />
-      <Sparkles />
-      <FloatingHearts />
-      <ShootingStars />
-      <CursorGlow />
-      <MouseTrail />
+      {/* Galaxy Background */}
+      <div
+        className="
+        fixed
+        inset-0
+        z-0
+        overflow-hidden
+        pointer-events-none
+        "
+      >
+        <AuroraGlow />
+        <FloatingStars />
+        <Sparkles />
+        <FloatingHearts />
+        <ShootingStars />
+      </div>
+
+      {/* Cursor Effects */}
+      <div
+        className="
+        fixed
+        inset-0
+        z-[999]
+        pointer-events-none
+        "
+      >
+        <CursorGlow />
+        <MouseTrail />
+      </div>
     </>
   );
 };
