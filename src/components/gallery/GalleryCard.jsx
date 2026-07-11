@@ -30,17 +30,18 @@ const GalleryCard = ({ photo, index }) => {
         className="group cursor-pointer"
       >
         <div className="bg-white rounded-3xl p-4 shadow-2xl">
-
           <img
             src={photo.image}
-            alt=""
-            className="rounded-2xl h-80 w-full object-cover"
+            alt={photo.caption}
+            loading="lazy"
+            decoding="async"
+            draggable={false}
+            className="rounded-2xl h-80 w-full object-cover transition-transform duration-300"
           />
 
           <p className="text-center text-gray-700 mt-4 opacity-0 group-hover:opacity-100 duration-500">
             {photo.caption}
           </p>
-
         </div>
       </motion.div>
     </PhotoView>
