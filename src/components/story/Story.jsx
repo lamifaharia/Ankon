@@ -17,15 +17,16 @@ const Story = () => {
 
         <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-10 md:p-14 shadow-[0_20px_80px_rgba(0,0,0,.35)]">
           <p className="text-lg md:text-xl text-gray-300 leading-10 text-center">
-            We met at university.
+            We met at university
             <br /><br />
-            I had no idea that my first friend there would become such an important part of my life.
-            <br /><br />
+            
+            I never imagined that the guy I texted just to be added to the university group would end up becoming such an important part of my life
+                        <br /><br />
             Somehow, through countless conversations, laughter, arguments, and unforgettable moments...
             <br /><br />
-            you became more than a friend.
+            you became more than a friend
             <br /><br />
-            You became my Bhai.
+            You became my Bhai, my partner in Crime
           </p>
         </div>
       </div>

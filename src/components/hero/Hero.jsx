@@ -178,11 +178,11 @@ const Hero = () => {
             leading-9
             "
           >
-            Some people enter your life as friends.
+            Some people enter your life as friends
             <br />
-            Some people become family.
+            Some people become family
             <br />
-            You became my Bhai ❤️
+            You became my Bhai 🫂
           </motion.p>
 
           <motion.a
@@ -212,7 +212,7 @@ transition-all
 duration-300
 "
           >
-            Begin Our Journey ✨
+            Let's start ✨
           </motion.a>
         </div>
       </motion.div>

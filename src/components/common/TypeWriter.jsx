@@ -4,13 +4,13 @@ const TypeWriter = () => {
   return (
     <TypeAnimation
       sequence={[
-        "My first university friend.",
+        "My first university friend",
         2000,
-        "My partner in crime.",
+        "My partner in crime",
         2000,
-        "The most annoying person I know.",
+        "The most annoying person I know",
         2000,
-        "The brother I chose.",
+        "The brother I chose",
         3000,
       ]}
       wrapper="span"

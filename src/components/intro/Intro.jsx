@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import Background from "../background/Background";
 
 const Intro = ({ onStart }) => {
 
@@ -59,6 +60,8 @@ const Intro = ({ onStart }) => {
         }}
 
       >
+
+        <Background />
 
 
         {/* Galaxy Background */}
@@ -142,7 +145,7 @@ const Intro = ({ onStart }) => {
             "
 
           >
-            Dear Bhai,
+            Dear Bhai🫂
           </motion.p>
 
 
@@ -223,7 +226,7 @@ const Intro = ({ onStart }) => {
 
             <br /><br />
 
-            This isn't just another birthday Wish.
+            Maybe it's not that special, but something I guess...
 
             <br /><br />
 
@@ -232,7 +235,7 @@ const Intro = ({ onStart }) => {
             laughter,
             fights,
             photos,
-            and everything in between.
+            and everything in between
 
             <br /><br />
 
@@ -240,7 +243,7 @@ const Intro = ({ onStart }) => {
 
             <br />
 
-            Please don't rush.
+            This tiny little thing is for you
 
             <br />
 
